@@ -11,8 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Echo Pull Request id
-        run: echo ${{ github.event.pull_request.id }}
+      - name: Echo Pull Request ID
+        run: echo ${{ github.event.pull_request.number }}
 
       - name: Echo Issue Number
         run: echo ${{ github.event.number }}
