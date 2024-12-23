@@ -1,0 +1,18 @@
+name: preview-provision
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  echo-number:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Echo Pull Request id
+        run: echo ${{ github.event.pull_request.id }}
+
+      - name: Echo Issue Number
+        run: echo ${{ github.event.number }}
